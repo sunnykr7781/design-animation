@@ -1,6 +1,6 @@
 var t = gsap.timeline();
 t.from("#navbar", {
-  delay: 0.5,
+  delay: 1,
   opacity: -1,
   y: 35,
 
@@ -29,18 +29,49 @@ t.from("#left #small", {
   duration: 0.3,
   scale: 1.4,
 });
-t.from("#right img", {
-  x: 700,
+// t.from("#right img", {
+//   x: 1100,
+// });
+t.to("#right img ", {
+  x: 400,
+  opacity: 0.5,
+
+  duration: 3,
+  scrollTrigger: {
+    trigger: "#right img",
+    scroller: "body",
+    // markers: "true",
+    start: "top 15%",
+    end: "top -50%",
+
+    scrub: 1,
+  },
 });
 t.from("#right", {
   delay: 0.3,
   scale: 0.85,
   duaration: 0.5,
 });
-
-t.from("#page2 .box , footer", {
+t.to("#left ", {
+  x: -400,
   opacity: 0,
-  x: -700,
+  opacity: 0.5,
+
+  duration: 3,
+  scrollTrigger: {
+    trigger: "#left",
+    scroller: "body",
+ 
+    start: "top 15%",
+    end: "top -50%",
+
+    scrub: 1,
+  },
+});
+
+t.from("#page2 .box ", {
+  opacity: 0,
+  y: 100,
   scale: 0.01,
   duration: 0.1,
 
@@ -48,8 +79,9 @@ t.from("#page2 .box , footer", {
     trigger: "#page2 .box",
     scroller: "body",
 
-    scrub: 1,
-    start: "top 100%",
-    end: "top 39.9%",
+
+    scrub: "true",
+    start: "top 170%",
+    end: "top 55%",
   },
 });
