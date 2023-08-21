@@ -29,9 +29,7 @@ t.from("#left #small", {
   duration: 0.3,
   scale: 1.4,
 });
-t.from("#right img", {
-  x: 1100,
-});
+
 t.to("#right img ", {
   x: 400,
   opacity: 0.5,
