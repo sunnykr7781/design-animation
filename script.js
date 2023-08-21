@@ -29,9 +29,9 @@ t.from("#left #small", {
   duration: 0.3,
   scale: 1.4,
 });
-// t.from("#right img", {
-//   x: 1100,
-// });
+t.from("#right img", {
+  x: 1100,
+});
 t.to("#right img ", {
   x: 400,
   opacity: 0.5,
@@ -61,7 +61,7 @@ t.to("#left ", {
   scrollTrigger: {
     trigger: "#left",
     scroller: "body",
- 
+
     start: "top 15%",
     end: "top -50%",
 
@@ -78,7 +78,6 @@ t.from("#page2 .box ", {
   scrollTrigger: {
     trigger: "#page2 .box",
     scroller: "body",
-
 
     scrub: "true",
     start: "top 170%",
